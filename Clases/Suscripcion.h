@@ -17,6 +17,18 @@
 #include <string>
 #include "IDictionary.h"
 #include "ICollectible.h"
+
+using namespace std;
+
+typedef enum TipoSuscripcion{
+    TEMPORAL , VITALICEA
+}TipoSuscripcion;
+
+typedef enum TiempoValidez{
+    UN_MES, TRES_MESES,DOCE_MESES
+}tiempoValidez;
+
+
 class Suscripcion : public ICollectible  {
 public:
     Suscripcion();
@@ -45,14 +57,14 @@ public:
     Temporal(const Temporal& orig);
     virtual ~Temporal();
     
-//    tiempoValidez getPeriodoValidez();                    Falta el enum tiempoValidez
+    tiempoValidez getPeriodoValidez();                    
     int getCostoMensual();
     bool getCancelada();
-//    void setPeriodoValidez(tiempoValidez);                Falta el enum tiempoValidez
+    void setPeriodoValidez(tiempoValidez);                
     void setCostoMensual(int);
     void setCancelada(bool);
 private:
-//   tiempoValidez periodoValidez;                          Falta el enum tiempoValidez
+    tiempoValidez periodoValidez;   
     int costoMensual;
     bool cancelada;
 };

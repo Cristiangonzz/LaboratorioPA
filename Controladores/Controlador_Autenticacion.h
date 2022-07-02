@@ -18,6 +18,10 @@
 #include "Usuario.h"
 #include "DataUsuario.h"
 #include <string>
+#include "ICollection.h"
+#include "IColeccionable.h"
+#include "List.h"
+#include "IDictionary.h"
 using namespace std;
 
 class ControladorUsuario : public InterfaceInicioSesion{
@@ -32,7 +36,7 @@ public:
 	void RegistrarUsuario();
 	void IngresarDatosUsuario(DataUsuario);
 	void CancelarAltaUsuario();
-	void IngresarNickname(/*DataJugador*/);//falta el datatype
+	void IngresarNickname(DataJugador);
 	void ConfirmarAltaUsuario();
 	Usuario* getUsuario();
 

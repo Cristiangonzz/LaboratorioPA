@@ -18,3 +18,6 @@ ControladorUsuario* ControladorUsuario::getInstance() {
         instance = new ControladorUsuario;
     return instance;
 }
+ControladorUsuario :: ControladorUsuario() {
+    this->usuarios = new List();
+}

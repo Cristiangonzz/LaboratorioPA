@@ -14,7 +14,10 @@
 #ifndef CONTROLADOR_DESARROLLADOR_H
 #define CONTROLADOR_DESARROLLADOR_H
 
-#include "Interface_Desarrollador.h"
+#include "InterfaceD.h"
+
+#include "IDictionary.h"
+#include "ICollection.h"
 
 class ControladorD : public InterfaceD{
 public:
@@ -24,20 +27,20 @@ public:
 
 	ControladorD* getInstance();
         
-/*
+
 	void ListarCategorias();//:Set(String)
-	void IngresarDatosCategoria(string,string/*,TipoCategoria);
+	void IngresarDatosCategoria(string,string,TipoCategoria);//Falta tipo categoria
 	void CancelarOperacion();
 	void AgregarCategoria();
 	void IngresarDatosVideojuego(string,string);
-	//void AsociarSuscripcion(/*DtTiempoValidez,int);
+	void AsociarSuscripcion(DtTiempoValidez,int);//Falta DtTiempoValidez
 	void AsociarSuscripcion(int);
 	void ObtenerCategoriasGeneros();//:Set(Genero)
-	void SeleccionarCategoria(/*Genero);
+	void SeleccionarCategoria(Genero);//Falta Genero
 	void ObtenerCategoriasPlataformas();//: Set(Plataformas);
-	//void SeleccionarCategoria(/*Plataforma);
+	void SeleccionarCategoria(Plataforma);
 	void ObtenerCategorias();//:Set(Categoria);
-	//void SeleccionarCategoria(/*Categoria);
+	void SeleccionarCategoria(Categoria);
 	void ConfirmarPublicacion();
 	void CancelarPublicacion();
 	void ListarJuego();//:Set(String)
@@ -46,7 +49,7 @@ public:
 	void cancelarEliminacion();
 	void ListarTodosVideojuegos();//:Set(String);
 	void ElegirVideojuego(string);//:Set(DataVideojuegoCU11);
-*/	
+
 	
 	
 	

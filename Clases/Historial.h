@@ -17,6 +17,12 @@
 #include "DtTime.h"
 #include "ICollectible.h"
 #include <string>
+
+typedef enum MetodoPago{
+    TARJETA,PAYPAL
+}MetodoPago;
+
+
 class Historial : public ICollectible  {
 public:
     Historial();

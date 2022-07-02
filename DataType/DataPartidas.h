@@ -32,7 +32,8 @@ public:
 private:
     string ID;
     float duracion;
-    DtTime* hora;
+    // El DataParida tiene una hora y una fecha como un DataTime dia,mes,año,hora,minutos,segundos    
+    DtTime* hora; 
     DtDate* fecha;
 };
 

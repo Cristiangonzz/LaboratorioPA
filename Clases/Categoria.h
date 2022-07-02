@@ -15,9 +15,21 @@
 #define CATEGORIA_H
 
 #include <string>
-#include "IDictionary.h"
 #include "ICollectible.h"
 using namespace std;
+
+typedef enum TipoGenero{
+    ACCION,AVENTURA,ESTRATEGIA,DEPORTE
+}TipoG;
+
+typedef enum TipoPlataforma{
+    PC,PS4,PS5,XBOXX,XBOXONE,SWITCH
+}TipoP;
+
+typedef enum TipoCategoria{
+    GENERO,PLATAFORMA ,OTROS
+}TipoCategoria;
+
 
 class Categoria : public ICollectible {
 public:
@@ -25,9 +37,9 @@ public:
     Categoria(const Categoria& orig);
     virtual ~Categoria();
     
-    string getNombre();
+    string getNombre(); //Aca sera que tenemos que hacer que retorne  el tipo de categoria
     string getDescripcion();
-    void setNombre(string);                             
+    void setNombre(string);//y aca recibir de tipo categoria                         
     void setDescripcion(string);
 private:
     string nombre;
@@ -40,10 +52,10 @@ public:
     Genero(const Genero& orig);
     virtual ~Genero();
     
-    //tipo getTipoGenero();                             Falta el enum tipo
-   //void setTipoGenero(tipo);                          Falta el enum tipo
+    tipoG getTipoGenero();                            
+    void setTipoGenero(tipoG);                         
 private:
-    //tipo tipoGenero;                                  Falta el enum tipo
+    tipoG tipoGenero;                               
 };
 //------------------------------------------------------------------------------
 class Plataforma : public Categoria {
@@ -52,9 +64,9 @@ public:
     Plataforma(const Plataforma& orig);
     virtual ~Plataforma();
     
-   //tipo getTipoPlataforma();                          Falta el enum tipo
-    //void setTipoPlataforma(tipo);                     Falta el enum tipo
+    tipoP getTipoPlataforma();                         
+    void setTipoPlataforma(tipoP);
 private:
-    //tipo tipoPlataforma;                              Falta el enum tipo
+    tipoP tipoPlataforma;
 };
 #endif /* CATEGORIA_H */
