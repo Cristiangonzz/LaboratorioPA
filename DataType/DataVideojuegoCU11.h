@@ -21,7 +21,7 @@ using namespace std;
 
 class DataVideojuegoCU11: public ICollectible {
 public:
-    DataVideojuegoCU11(string,float,float,string,float /*,vector de categorias*/);
+    DataVideojuegoCU11(string,float,float,string,float , categorias);
     string getDescripcion();
     string getEmpresa();
     float getCostoPermanente();
@@ -34,6 +34,7 @@ private:
     float costomensual;
     string empresa;
     float prom_puntaje;
+    ICollection* categorias;
 };
 
 #endif /* DATAVIDEOJUEGOCU11_H */

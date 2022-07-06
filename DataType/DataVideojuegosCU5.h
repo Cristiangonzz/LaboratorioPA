@@ -16,20 +16,21 @@
 #include <iostream>
 #include "string.h"
 #include "ICollectible.h"
+#include "Suscripcion.h"
 
 using namespace std;
 
 class DataVideojuegosCU5: public ICollectible {
 public:
-    DataVideojuegosCU5(string,float/*,TipoSuscripcion*/);
+    DataVideojuegosCU5(string,float,TipoSuscripcion);
     string getNombre();
     float getCosto();
-    //int getTipoSuscripcion();
+    TipoSuscripcion getTipoSuscripcion();
     virtual ~DataVideojuegosCU5();
 private:
     string nombre;
     float costo;
-    //int TipoSuscripcion;
+    TipoSuscripcion suscripcion ; //enum TipoSuscripcion {TEMPORAL, VITALICEA};
 };
 
 #endif /* DATAVIDEOJUEGOSCU5_H */
